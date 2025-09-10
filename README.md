@@ -79,3 +79,11 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
     ```
     return maior_final, menor_final
     ```
+
+## Relatório técnico
+
+### Análise da complexidade assintótica pelo método de contagem de operações:
+A análise assintótica avalia o comportamento de um algoritmo (o crescimento do tempo de execução) em relação ao aumento do tamanho da entrada de elementos. Neste caso, este algoritmo de seleção simultânea do maior e do menor elementos é do tipo recursivo binário, em que são executadas duas invocações recursivas.
+
+
+Pode-se considerar que a complexidade assintótica deste algoritmo é 
