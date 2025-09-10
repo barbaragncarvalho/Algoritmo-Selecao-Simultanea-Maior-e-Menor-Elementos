@@ -1,4 +1,4 @@
-# Algoritmo de Seleção Simultânea do Maior e do Menor Elementos (MaxMin Select) 
+![WhatsApp Image 2025-09-10 at 14 03 39](https://github.com/user-attachments/assets/335de400-1229-49fd-9446-a962652b6056)# Algoritmo de Seleção Simultânea do Maior e do Menor Elementos (MaxMin Select) 
 ## Sobre o projeto
 Este projeto consiste na implementação do algoritmo de seleção simultânea do maior e do menor elementos (MaxMin Select) de uma sequência de números, utilizando a abordagem de divisão e conquista.
 
@@ -63,8 +63,19 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
         meio = (inicio + fim) // 2
    ```
 
-7. Ele executa a si mesmo para a metade da esquerda e da direita, atribuindo seus resultados, respectivamente, às variáveis ```max_esq```, ```min_esq```, ```max_dir``` e ```min_dir```. Nessa parte, o algoritmo irá dividir as metades da lista em metades menores ainda e executar esta função até chegar aos casos bases de cada metade. Depois, irá agrupando e comparando os valores retornados até retornar os valores max e min das metades originais esquerda e direita.
+7. Ele executa a si mesmo para a metade da esquerda e da direita, atribuindo seus resultados, respectivamente, às variáveis ```max_esq```, ```min_esq```, ```max_dir``` e ```min_dir```. Nessa parte, o algoritmo irá dividir as metades da lista em metades menores ainda e executar esta função até chegar aos casos bases de cada metade. Depois, irá agrupando e comparando os valores retornados (```maior_final``` e ```menor_final```) até retornar os valores max e min das metades originais esquerda e direita.
    ```
-   max_esq, min_esq = _max_min_recursivo(lista, inicio, meio)
+        max_esq, min_esq = _max_min_recursivo(lista, inicio, meio)
         max_dir, min_dir = _max_min_recursivo(lista, meio + 1, fim)
    ```
+
+8. O algoritmo compara os dois maiores valores da esquerda e direita e salva o maior na variável ```maior_final```. E compara os dois menores valores de ambas as metades e salva o menor deles na variável ```menor_final```. 
+   ```
+        maior_final = max(max_esq, max_dir)
+        menor_final = min(min_esq, min_dir)
+   ```
+
+9. Assim, o algoritmo retorna, na sua última recursão, os valores maior e menor para a função ```max_min_select```.
+    ```
+    return maior_final, menor_final
+    ```
