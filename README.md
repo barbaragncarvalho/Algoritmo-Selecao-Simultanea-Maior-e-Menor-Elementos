@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-09-10 at 14 03 39](https://github.com/user-attachments/assets/335de400-1229-49fd-9446-a962652b6056)# Algoritmo de Seleção Simultânea do Maior e do Menor Elementos (MaxMin Select) 
+# Algoritmo de Seleção Simultânea do Maior e do Menor Elementos (MaxMin Select) 
 ## Sobre o projeto
 Este projeto consiste na implementação do algoritmo de seleção simultânea do maior e do menor elementos (MaxMin Select) de uma sequência de números, utilizando a abordagem de divisão e conquista.
 
