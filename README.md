@@ -85,5 +85,32 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
 ### Análise da complexidade assintótica pelo método de contagem de operações:
 A análise assintótica avalia o comportamento de um algoritmo (o crescimento do tempo de execução) em relação ao aumento do tamanho da entrada de elementos. Neste caso, este algoritmo de seleção simultânea do maior e do menor elementos é do tipo recursivo binário, em que são executadas duas invocações recursivas.
 
+Analisando o algoritmo, percebe-se que no caso base 1 não é feita comparação entre os elementos da lista, mas no caso base 2 é feita 1 comparação. 
 
-Pode-se considerar que a complexidade assintótica deste algoritmo é 
+Em seguida, na parte da recursão, como a lista é dividida ao meio, cada uma das duas chamadas recursivas realiza n/2 comparações entre os elementos (ou 2.n/2). 
+
+Por fim, são feitas mais 2 comparações para achar o maior e menor elementos finais.
+
+Assim, calculando tudo tem-se:
+      Ct(n) = 2.C(n/2) + 2
+
+      
+Se considerar n como n/2 e substituir nesta fórmula, tem-se:
+      Ct(n/2) = 2.C((n/2)/2) + 2
+      Ct(n/2) = 2.C(n/4) + 2 
+
+      
+Substituindo na fórmula anterior, tem-se:
+      Ct(n) = 2.(2.C(n/4) + 2) + 2
+      Ct(n) = 4.C(n/4) + 4 + 2
+
+      
+Agora, para encontrar o custo de n/4, basta substituir n/4 na primeira fórmula:
+      Ct(n/4) = 2.C((n/4)/2) + 2
+      Ct(n/4) = 2.C(n/8) + 2
+
+Substituindo isso na fórmula anterior, tem-se:
+      Ct(n) = 4.(2.C(n/8) + 2) + 4 + 2
+      Ct(n) = 8.C(n/8) + 8 + 4 + 2
+      
+Pode-se considerar que a complexidade assintótica deste algoritmo é O(n),
