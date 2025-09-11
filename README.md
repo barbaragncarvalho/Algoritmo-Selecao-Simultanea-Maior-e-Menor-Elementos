@@ -87,30 +87,24 @@ A análise assintótica avalia o comportamento de um algoritmo (o crescimento do
 
 Analisando o algoritmo, percebe-se que no caso base 1 não é feita comparação entre os elementos da lista, mas no caso base 2 é feita 1 comparação. 
 
-Em seguida, na parte da recursão, como a lista é dividida ao meio, cada uma das duas chamadas recursivas realiza n/2 comparações entre os elementos (ou 2.n/2). 
+
+Em seguida, na parte da recursão, como a lista é dividida ao meio, cada uma das duas chamadas recursivas realiza n/2 comparações entre os elementos (ou 2*n/2). 
+
 
 Por fim, são feitas mais 2 comparações para achar o maior e menor elementos finais.
 
-Assim, calculando tudo tem-se:
-      Ct(n) = 2.C(n/2) + 2
 
-      
-Se considerar n como n/2 e substituir nesta fórmula, tem-se:
-      Ct(n/2) = 2.C((n/2)/2) + 2
-      Ct(n/2) = 2.C(n/4) + 2 
+• n = 1: 0 comparações.
 
-      
-Substituindo na fórmula anterior, tem-se:
-      Ct(n) = 2.(2.C(n/4) + 2) + 2
-      Ct(n) = 4.C(n/4) + 4 + 2
 
-      
-Agora, para encontrar o custo de n/4, basta substituir n/4 na primeira fórmula:
-      Ct(n/4) = 2.C((n/4)/2) + 2
-      Ct(n/4) = 2.C(n/8) + 2
+• n = 2: 1 comparação.
 
-Substituindo isso na fórmula anterior, tem-se:
-      Ct(n) = 4.(2.C(n/8) + 2) + 4 + 2
-      Ct(n) = 8.C(n/8) + 8 + 4 + 2
-      
-Pode-se considerar que a complexidade assintótica deste algoritmo é O(n),
+
+• n > 2: Ct(n) = 2*C(n/2) + 2
+
+
+Portanto, pode-se considerar que a complexidade assintótica deste algoritmo é **O(n)**, ou seja, seu crescimento é linear.
+
+
+### Análise da complexidade assintótica pela aplicação do Teorema Mestre
+
