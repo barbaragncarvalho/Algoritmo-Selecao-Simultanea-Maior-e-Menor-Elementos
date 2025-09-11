@@ -107,4 +107,20 @@ Portanto, pode-se considerar que a complexidade assintótica deste algoritmo é 
 
 
 ### Análise da complexidade assintótica pela aplicação do Teorema Mestre
+De acordo com este teorema, a recorrência de um algoritmo de divisão e conquista é 𝑇(𝑛) = 2𝑇 (𝑛 / 2) + 𝑂(1).
 
+
+1) • a = 2: pois é o número de vezes que a função recursiva se chama (ou seja, se subdivide em partes menores).
+
+• b = 2: pois é o número de partes menores que a lista é subdividida em cada chamada.
+
+• f(n) = O(1): pois representa o custo do trabalho de dividir a lista e combinar os resultados. Como são feitas apenas 2 comparações, esse valor é constante.
+
+
+2) p = log 𝑏 𝑎 = log 2 2 = 1
+
+
+3) Como o teorema o Teorema Mestre compara a função f(n) com n^(log 𝑏 𝑎 ), tem-se que f(n)=O(1) e n^(log 𝑏 𝑎 ) = n^1 = n. Portanto, como o custo n é maior que 1, signfica que a recursão tem o maior custo. Assim, de acordo o teorema, esta recorrência se enquadra no caso 1.
+
+
+4) Visto que a solução do caso 1 é T(n) = O(n^p), ao substituir o p, tem-se: T(n) = O(n^1) = **O(n)**.
