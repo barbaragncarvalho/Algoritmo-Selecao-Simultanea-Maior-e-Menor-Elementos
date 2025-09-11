@@ -21,7 +21,7 @@ python main.py
 O resultado do maior e menor números do exemplo de lista aparecerá na tela. Para testar com outros números, basta editar a minha_lista no final do arquivo ```main.py```.
 
 ## Lógica do algoritmo
-O algoritmo consiste em encontrar o maior e menor números de uma lista de números. Para isso, ele divide esta lista ao meio (esquerda e direita), descobre o maior e menor valor de cada parte separadamente, e, no final, junta os 2 valores maiores para achar o maior final e junta os 2 menores para achar o menor valor final da lista inteira. Assim, o algoritmo realiza menos comparações do que um tradicional. Assim, pode-se dizer que este algoritmo utiliza a técnica de divisão e conquista.
+O algoritmo consiste em encontrar o maior e menor números de uma lista de números. Para isso, ele divide esta lista ao meio (esquerda e direita), descobre o maior e menor valor de cada parte separadamente, e, no final, junta os 2 valores maiores para achar o maior final e junta os 2 menores para achar o menor valor final da lista inteira. Assim, o algoritmo realiza menos comparações do que um tradicional. Com isso, pode-se dizer que este algoritmo utiliza a técnica de divisão e conquista.
 
 ### Explicação linha a linha
 1. Função principal que realiza a chamada inicial da função recursiva. Primeiro, ela verifica se a lista passada não é vazia, por meio da condicional "if". Se sim, retorna "none" tanto para o maior, quanto para o menor valor.
@@ -45,7 +45,7 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
         return maior, menor
    ```
 
-5. Posteriormente, verifica, como segundo caso base, se a lista possui 2 elementos. Se sim, verifica entre ele se o primeiro é menor que o segundo. Se sim, atribui estes valores nas variáveis correspondentes. Se não, quer dizer que o último valor é o menor, reaizando a atribuição respectiva e retornando estes valores. Com isso, finaliza a execução do algoritmo.
+5. Posteriormente, verifica, como segundo caso base, se a lista possui 2 elementos. Se sim, verifica entre eles se o primeiro é menor que o segundo. Se sim, atribui estes valores nas variáveis correspondentes. Se não, quer dizer que o último valor é o menor, realizando a atribuição respectiva e retornando estes valores. Com isso, finaliza a execução do algoritmo.
    ```
    elif inicio == fim - 1:
         if lista[inicio] < lista[fim]:
@@ -57,7 +57,7 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
         return maior, menor
    ```
 
-6. Caso os casos bases não tenham sido satisfeitos, significa que a lista tem mais de 2 elementos. Então, o algoritmo divide a lista ao meio.
+6. Considerando que os casos bases não tenham sido satisfeitos, significa que a lista tem mais de 2 elementos. Então, o algoritmo divide a lista ao meio.
    ```
    else:
         meio = (inicio + fim) // 2
@@ -106,7 +106,7 @@ Por fim, são feitas mais 2 comparações para achar o maior e menor elementos f
 Portanto, pode-se considerar que a complexidade assintótica deste algoritmo é **O(n)**, ou seja, seu crescimento é linear.
 
 
-### Análise da complexidade assintótica pela aplicação do Teorema Mestre
+### Análise da complexidade assintótica pela aplicação do Teorema Mestre:
 De acordo com este teorema, a recorrência de um algoritmo de divisão e conquista é 𝑇(𝑛) = 2𝑇 (𝑛 / 2) + 𝑂(1).
 
 
