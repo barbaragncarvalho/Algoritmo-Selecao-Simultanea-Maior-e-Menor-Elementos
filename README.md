@@ -45,7 +45,7 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
         return maior, menor
    ```
 
-5. Posteriormente, verifica, como segundo caso base, se a lista possui 2 elementos. Se sim, verifica entre ele se o primeiro é menor que o segundo. Se sim, atribui estes valores nas variáveis correspondentes. Se não, quer dizer que o último valor é o menor, reaizando a atribuição respectiva e retornando estes valores. Com isso, finaliza a execução do algoritmo.
+5. Posteriormente, verifica, como segundo caso base, se a lista possui 2 elementos. Se sim, verifica entre eles se o primeiro é menor que o segundo. Se sim, atribui estes valores nas variáveis correspondentes. Se não, quer dizer que o último valor é o menor, realizando a atribuição respectiva e retornando estes valores. Com isso, finaliza a execução do algoritmo.
    ```
    elif inicio == fim - 1:
         if lista[inicio] < lista[fim]:
@@ -57,7 +57,7 @@ O algoritmo consiste em encontrar o maior e menor números de uma lista de núme
         return maior, menor
    ```
 
-6. Caso os casos bases não tenham sido satisfeitos, significa que a lista tem mais de 2 elementos. Então, o algoritmo divide a lista ao meio.
+6. Considerando que os casos bases não tenham sido satisfeitos, significa que a lista tem mais de 2 elementos. Então, o algoritmo divide a lista ao meio.
    ```
    else:
         meio = (inicio + fim) // 2
