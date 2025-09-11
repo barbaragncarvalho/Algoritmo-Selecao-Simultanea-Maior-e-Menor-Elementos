@@ -23,6 +23,8 @@ O resultado do maior e menor números do exemplo de lista aparecerá na tela. Pa
 ## Lógica do algoritmo
 O algoritmo consiste em encontrar o maior e menor números de uma lista de números. Para isso, ele divide esta lista ao meio (esquerda e direita), descobre o maior e menor valor de cada parte separadamente, e, no final, junta os 2 valores maiores para achar o maior final e junta os 2 menores para achar o menor valor final da lista inteira. Assim, o algoritmo realiza menos comparações do que um tradicional. Com isso, pode-se dizer que este algoritmo utiliza a técnica de divisão e conquista.
 
+![diagrama visual](assets/maxmin.png)
+
 ### Explicação linha a linha
 1. Função principal que realiza a chamada inicial da função recursiva. Primeiro, ela verifica se a lista passada não é vazia, por meio da condicional "if". Se sim, retorna "none" tanto para o maior, quanto para o menor valor.
    ```
