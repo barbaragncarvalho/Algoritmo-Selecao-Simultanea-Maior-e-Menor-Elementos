@@ -106,7 +106,7 @@ Por fim, são feitas mais 2 comparações para achar o maior e menor elementos f
 Portanto, pode-se considerar que a complexidade assintótica deste algoritmo é **O(n)**, ou seja, seu crescimento é linear.
 
 
-### Análise da complexidade assintótica pela aplicação do Teorema Mestre
+### Análise da complexidade assintótica pela aplicação do Teorema Mestre:
 De acordo com este teorema, a recorrência de um algoritmo de divisão e conquista é 𝑇(𝑛) = 2𝑇 (𝑛 / 2) + 𝑂(1).
 
 
